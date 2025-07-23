@@ -21,7 +21,7 @@ with DAG(dag_id="pvc_write_test", start_date=datetime(2023, 1, 1), schedule=None
         name="write-to-pvc",
         image="alpine",
         cmds=["sh", "-c"],
-        arguments=["echo 'Hello from Airflow!' >> /workspace/temp.txt; cat /workspace/temp2.text"],
+        arguments=["echo 'Hello from Airflow!' >> /workspace/temp.txt; cat /workspace/temp2.txt"],
         volumes=[volume],
         volume_mounts=[volume_mount],
         is_delete_operator_pod=True,
