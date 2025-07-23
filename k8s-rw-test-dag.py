@@ -3,7 +3,7 @@ from airflow.providers.cncf.kubernetes.operators.pod import KubernetesPodOperato
 from datetime import datetime
 from kubernetes.client import models as k8s
 
-with DAG(dag_id="pvc_write_test", start_date=datetime(2023, 1, 1), schedule_interval=None) as dag:
+with DAG(dag_id="pvc_write_test", start_date=datetime(2023, 1, 1), schedule=None) as dag:
 
     volume = k8s.V1Volume(
         name="volume-rw",
