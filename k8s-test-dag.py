@@ -14,7 +14,7 @@ with DAG(
     'mock_k8s_dag',
     default_args=default_args,
     description='A simple DAG to demonstrate KubernetesPodOperator',
-    schedule_interval='@once',  # Run once
+    schedule='@once',  # Run once
     catchup=False,
 ) as dag:
 
