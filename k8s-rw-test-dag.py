@@ -7,7 +7,7 @@ with DAG(dag_id="pvc_write_test", start_date=datetime(2023, 1, 1), schedule=None
 
     volume = k8s.V1Volume(
         name="volume-rw",
-        persistent_volume_claim=k8s.V1PersistentVolumeClaimVolumeSource(claim_name="vision-learning-non-cui"),
+        persistent_volume_claim=k8s.V1PersistentVolumeClaimVolumeSource(claim_name="k8s-vision-non-cui-rw"),
     )
 
     volume_mount = k8s.V1VolumeMount(
